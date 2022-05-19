@@ -54,6 +54,7 @@ function saveRecord(record) {
   const transaction = db.transaction(['new_entry'], 'readwrite');
   const entryObjectStore = transaction.objectStore('new_entry');
   entryObjectStore.add(record);
+  alert('Your entry has been saved and will be sent to the database when you come back online');
 };
 
 window.addEventListener('online', uploadEntry)
